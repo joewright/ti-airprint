@@ -42,12 +42,27 @@ else {
             top: 10, right: 10
         });
         win.add(button);
-        button.addEventListener('click', function () {
+        function print() {
             AirPrint.print({
                 url: pdfFile.nativePath,
                 showsPageRange: true,
                 view: button
             });
+        }
+        button.addEventListener('click', print);
+
+        function printHtml(html) {
+            AirPrint.print({
+                url: 'output.html',
+                html: html,
+                isHtml: true,
+                view: button
+            });
+        }
+        //now supporting HTML strings
+        button.addEventListener('doubletap', function() {
+            var myHtmls = '<!DOCTYPE html><html><head></head><body><h1>Hello!</h1></body></html>';
+            printHtml(myHtmls);
         });
     }
 
