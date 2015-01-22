@@ -7,7 +7,7 @@ description: Exposes the AirPrint API to Titanium Mobile applications.
 author: Dawson Toth
 license: Apache License, Version 2.0
 copyright: Copyright (c) 2010-2013 by Appcelerator, Inc.
-architectures: armeabi armeabi-v7a x86
+architectures: armv7 arm64 i386 x86_64
 
 # these should not be edited
 name: airprint

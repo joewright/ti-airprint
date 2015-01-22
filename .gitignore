@@ -1,3 +1,4 @@
 .DS_Store
 build
-*.zip
+airprint.xcodeproj/project.xcworkspace
+airprint.xcodeproj/xcuserdata
